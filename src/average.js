@@ -13,6 +13,29 @@
 
 // Inicio Projeto
 
-const average = () => {};
+const average = (arrayNumbers) => {
+  const numbers = arrayNumbers.length;
+  let sum = 0;
+  let media = 0;
+
+  if(arrayNumbers[0] === undefined){
+    return undefined;
+  }
+
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if(typeof arrayNumbers[index] !== 'number'){
+      return undefined;
+    }
+  }
+
+  for (let index in arrayNumbers){
+    sum += arrayNumbers[index];
+  }
+
+  media = Math.round(sum / numbers); 
+  return media;
+};
+
+average([]);
 
 module.exports = average;
