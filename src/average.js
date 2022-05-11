@@ -36,6 +36,4 @@ const average = (arrayNumbers) => {
   return media;
 };
 
-average([]);
-
 module.exports = average;
