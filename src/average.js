@@ -18,17 +18,17 @@ const average = (arrayNumbers) => {
   let sum = 0;
   let media = 0;
 
-  if(arrayNumbers[0] === undefined){
+  if (arrayNumbers[0] === undefined) {
     return undefined;
   }
 
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if(typeof arrayNumbers[index] !== 'number'){
+    if (typeof arrayNumbers[index] !== 'number') {
       return undefined;
     }
   }
 
-  for (let index in arrayNumbers){
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
     sum += arrayNumbers[index];
   }
 
