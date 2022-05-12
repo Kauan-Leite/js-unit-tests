@@ -33,6 +33,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
   it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se productDetails é uma função.
+    fail('Teste vazio!');
       expect(typeof productDetails).toBe('function');
 
     // Teste se o retorno da função é um array.
@@ -44,9 +45,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
   });
   describe('teste aqui', () => {
     it('teste', () => {
-
-      expect(typeof productDetails[0]).toBe('a');
-
+      expect(productDetails('sim', 'nao')).toBe('talvez');
     })
   })
 });
