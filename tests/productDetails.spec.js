@@ -33,19 +33,21 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
   it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se productDetails é uma função.
-    fail('Teste vazio!');
       expect(typeof productDetails).toBe('function');
 
     // Teste se o retorno da função é um array.
+      expect(typeof productDetails('sim', 'nao')).toEqual(typeof []);
 
     // Teste se o array retornado pela função contém dois itens dentro.
+      expect(productDetails('sim', 'nao').length).toBe(2);
+
     // Teste se os dois itens dentro do array retornado pela função são objetos.
+      expect(productDetails('biscoito', 'biscoito')).toEqual([{"details": {"productId": "biscoito123"}, "name": "biscoito"}, {"details": {"productId": "biscoito123"}, "name": "biscoito"}]);
+
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
+      expect(productDetails('pao', 'bolacha')).toEqual([{"details": {"productId": "pao123"}, "name": "pao"}, {"details": {"productId": "bolacha123"}, "name": "bolacha"}]);
+
     // Teste se os dois productIds terminam com 123.
+      expect(productDetails('paoQueijo', 'bolachaDoce')).toEqual([{"details": {"productId": "paoQueijo123"}, "name": "paoQueijo"}, {"details": {"productId": "bolachaDoce123"}, "name": "bolachaDoce"}]);
   });
-  describe('teste aqui', () => {
-    it('teste', () => {
-      expect(productDetails('sim', 'nao')).toBe('talvez');
-    })
-  })
 });
